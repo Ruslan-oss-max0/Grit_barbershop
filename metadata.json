@@ -1,0 +1,6 @@
+{
+  "name": "Grit Barbershop — демо",
+  "description": "Демо-версія сайту для чоловічого барбершопу Grit Barbershop у Києві (вул. Бориса Грінченка, 2).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
