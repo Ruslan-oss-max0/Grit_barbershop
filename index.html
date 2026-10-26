@@ -1,0 +1,1544 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0f1012" />
+
+    <title>Barbershop 369 — демо</title>
+    <meta name="description" content="Демо-версія сайту для чоловічого барбершопу Barbershop 369 у Києві (вул. Гарматна, 38А, ЖК «Козацький»). Стрижки, борода, онлайн-запис." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Barbershop 369 — демо" />
+    <meta property="og:description" content="Демо-версія сайту для чоловічого барбершопу Barbershop 369 у Києві (вул. Гарматна, 38А, ЖК «Козацький»). Стрижки, борода, онлайн-запис." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&h=630&q=80" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Інтер'єр чоловічого барбершопу Barbershop 369 у Києві" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Barbershop 369 — демо" />
+    <meta name="twitter:description" content="Демо-версія сайту для чоловічого барбершопу Barbershop 369 у Києві (вул. Гарматна, 38А, ЖК «Козацький»)." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&h=630&q=80" />
+    <meta name="twitter:image:alt" content="Інтер'єр чоловічого барбершопу Barbershop 369 у Києві" />
+
+    <!-- Favicon (Inline SVG: Gold 369 on dark background) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1012'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Montserrat, sans-serif' font-weight='900' font-size='13' fill='%23c59b63'%3E369%3C/text%3E%3C/svg%3E" />
+
+    <!-- Google Fonts: Montserrat (акцентні заголовки) + Manrope (текст) з повною кирилицею -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- ==========================================================================
+         EDIT HERE FOR A NEW BUSINESS / CONFIGURATION
+         ========================================================================== -->
+    <script>
+      window.BARBER_CONFIG = {
+        name: "Barbershop 369",
+        shortName: "369",
+        type: "Чоловічий барбершоп",
+        city: "Київ",
+        address: "вул. Гарматна, 38А",
+        locationDetail: "ЖК «Козацький»",
+        phoneRaw: "0975051176",
+        phoneDisplay: "097 505 1176",
+        hoursText: "Графік уточнюйте за телефоном",
+        bookingUrl: "https://n1340326.alteg.io",
+        authorTelegram: "https://t.me/ruslan_num0",
+        authorName: "Руслан Крижанський",
+        services: [
+          {
+            name: "Чоловіча стрижка",
+            description: "Класична або сучасна стрижка з урахуванням форми обличчя та структури волосся."
+          },
+          {
+            name: "Стрижка + борода",
+            description: "Повний комплекс догляду: підбір стрижки та оформлення контурів бороди."
+          },
+          {
+            name: "Моделювання бороди",
+            description: "Стрижка бороди та надання акуратної форми за індивідуальними контурами."
+          },
+          {
+            name: "Дитяча стрижка",
+            description: "Охайна та зручна стрижка для хлопців з уважним підходом майстра."
+          }
+        ],
+        gallery: [
+          {
+            id: "interior",
+            caption: "Інтер'єр",
+            alt: "Інтер'єр барбершопу: ряд крісел та дзеркал",
+            imageUrl: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            id: "haircut",
+            caption: "Стрижка",
+            alt: "Майстер виконує чоловічу стрижку ножицями",
+            imageUrl: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            id: "beard",
+            caption: "Борода",
+            alt: "Оформлення та моделювання бороди у барбершопі",
+            imageUrl: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+          }
+        ]
+      };
+    </script>
+
+    <style>
+      /* ==========================================================================
+         CSS VARIABLES & RESET
+         ========================================================================== */
+      :root {
+        --color-bg-base: #0f1012;
+        --color-bg-surface: #16181c;
+        --color-bg-card: #1c1f24;
+        --color-bg-card-hover: #23272e;
+        --color-bg-glass: rgba(18, 20, 24, 0.88);
+
+        --color-gold: #c59b63;
+        --color-gold-hover: #d9ad73;
+        --color-gold-muted: rgba(197, 155, 99, 0.16);
+        --color-copper: #bf7848;
+
+        --color-text-main: #f5f5f7;
+        --color-text-muted: #a3a8b7;  /* High contrast: 8.0:1 on base, 6.8:1 on card */
+        --color-text-dim: #9aa0b0;    /* High contrast: 7.3:1 on base, 6.1:1 on card (> 4.5:1 WCAG AA) */
+
+        --color-border: rgba(255, 255, 255, 0.09);
+        --color-border-focus: rgba(197, 155, 99, 0.45);
+
+        --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 14px;
+        --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        --container-width: 1040px;
+        --min-tap: 44px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--color-bg-base);
+        color: var(--color-text-main);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: var(--color-bg-base);
+        color: var(--color-text-main);
+        position: relative;
+        padding-bottom: 84px; /* Space for mobile floating bar */
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 0;
+        }
+      }
+
+      /* Visible Focus-Visible outlines in gold accent colour */
+      :focus-visible {
+        outline: 2px solid var(--color-gold);
+        outline-offset: 3px;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      .btn:focus-visible {
+        outline: 2px solid var(--color-gold);
+        outline-offset: 3px;
+      }
+
+      /* Skip to content link */
+      .skip-link {
+        position: absolute;
+        top: -120px;
+        left: 20px;
+        z-index: 999;
+        background: var(--color-gold);
+        color: #0f1012;
+        padding: 12px 20px;
+        min-height: var(--min-tap);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        transition: top 0.2s ease;
+      }
+
+      .skip-link:focus {
+        top: 14px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ==========================================================================
+         DEMO BANNER
+         ========================================================================== */
+      .demo-banner {
+        background: linear-gradient(90deg, #1d1913 0%, #292012 50%, #1d1913 100%);
+        border-bottom: 1px solid rgba(197, 155, 99, 0.32);
+        padding: 8px 16px;
+        font-size: 0.82rem;
+        color: #f0d4b0;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .demo-banner__badge {
+        display: inline-block;
+        background: var(--color-gold);
+        color: #0f1012;
+        font-weight: 800;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 2px 7px;
+        border-radius: var(--radius-sm);
+      }
+
+      .demo-banner__link {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      /* ==========================================================================
+         STICKY HEADER (BEM)
+         ========================================================================== */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 90;
+        background-color: var(--color-bg-glass);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+
+      /* Header Logo: "369" in heading font with "BARBERSHOP" smaller beside it */
+      .header__logo {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 8px;
+        line-height: 1;
+        padding: 6px 0;
+      }
+
+      .header__logo-number {
+        font-family: var(--font-heading);
+        font-size: 1.6rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+      }
+
+      .header__logo-text {
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+      }
+
+      .header__actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .header__phone-link {
+        display: none;
+        color: var(--color-text-muted);
+        font-size: 0.9rem;
+        font-weight: 600;
+        min-height: var(--min-tap);
+        align-items: center;
+        gap: 8px;
+      }
+
+      @media (min-width: 640px) {
+        .header__phone-link {
+          display: inline-flex;
+        }
+      }
+
+      .header__phone-link:hover {
+        color: var(--color-gold);
+      }
+
+      /* ==========================================================================
+         BUTTONS (BEM) - Min-height: 44px on all screens
+         ========================================================================== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--font-heading);
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0 24px;
+        min-height: var(--min-tap);
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+        white-space: nowrap;
+        user-select: none;
+      }
+
+      .btn--primary {
+        background-color: var(--color-gold);
+        color: #0f1012;
+        border: 1px solid var(--color-gold);
+        box-shadow: 0 4px 16px rgba(197, 155, 99, 0.22);
+      }
+
+      .btn--primary:hover {
+        background-color: var(--color-gold-hover);
+        border-color: var(--color-gold-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(197, 155, 99, 0.35);
+      }
+
+      .btn--primary:active {
+        transform: translateY(0);
+      }
+
+      .btn--outline {
+        background-color: transparent;
+        color: var(--color-text-main);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+      }
+
+      .btn--outline:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        border-color: var(--color-gold);
+        color: var(--color-gold);
+      }
+
+      /* .btn--sm: Explicitly >= 44px min-height for tap target comfort */
+      .btn--sm {
+        min-height: var(--min-tap);
+        padding: 0 18px;
+        font-size: 0.82rem;
+      }
+
+      /* ==========================================================================
+         HERO SECTION (BEM)
+         ========================================================================== */
+      .hero {
+        position: relative;
+        padding: 60px 0 64px;
+        border-bottom: 1px solid var(--color-border);
+        background: radial-gradient(circle at 50% 20%, rgba(197, 155, 99, 0.08) 0%, rgba(15, 16, 18, 0) 70%);
+      }
+
+      @media (min-width: 768px) {
+        .hero {
+          padding: 86px 0 92px;
+        }
+      }
+
+      .hero__content {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero__tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background-color: var(--color-gold-muted);
+        border: 1px solid rgba(197, 155, 99, 0.3);
+        border-radius: var(--radius-sm);
+        color: var(--color-gold);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        max-width: 100%;
+        line-height: 1.35;
+      }
+
+      .hero__tag-extra {
+        display: none;
+      }
+
+      @media (min-width: 520px) {
+        .hero__tag-extra {
+          display: inline;
+        }
+      }
+
+      .hero__tag::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-gold);
+      }
+
+      .hero__title {
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        line-height: 1.15;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-bottom: 18px;
+        color: #ffffff;
+      }
+
+      @media (min-width: 640px) {
+        .hero__title {
+          font-size: 3.1rem;
+        }
+      }
+
+      .hero__subtitle {
+        font-size: 1.05rem;
+        color: var(--color-text-muted);
+        line-height: 1.55;
+        max-width: 620px;
+        margin: 0 auto 34px;
+        font-weight: 400;
+      }
+
+      @media (min-width: 640px) {
+        .hero__subtitle {
+          font-size: 1.2rem;
+        }
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 42px;
+      }
+
+      @media (min-width: 480px) {
+        .hero__actions {
+          flex-direction: row;
+          gap: 16px;
+        }
+      }
+
+      /* Hero Meta Strip */
+      .hero__meta {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        border-top: 1px solid var(--color-border);
+        padding-top: 26px;
+        text-align: left;
+      }
+
+      @media (min-width: 640px) {
+        .hero__meta {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+        }
+      }
+
+      .hero__meta-item {
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--color-border);
+        padding: 14px 18px;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .hero__meta-icon {
+        color: var(--color-gold);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .hero__meta-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-text-dim);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .hero__meta-value {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--color-text-main);
+      }
+
+      /* ==========================================================================
+         SECTIONS GENERAL (BEM)
+         ========================================================================== */
+      .section {
+        padding: 68px 0;
+        border-bottom: 1px solid var(--color-border);
+        position: relative;
+      }
+
+      @media (min-width: 768px) {
+        .section {
+          padding: 88px 0;
+        }
+      }
+
+      .section--surface {
+        background-color: var(--color-bg-surface);
+      }
+
+      .section__header {
+        margin-bottom: 38px;
+        text-align: left;
+      }
+
+      @media (min-width: 768px) {
+        .section__header {
+          margin-bottom: 48px;
+        }
+      }
+
+      .section__label {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--color-gold);
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .section__title {
+        font-family: var(--font-heading);
+        font-size: 1.85rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        line-height: 1.2;
+      }
+
+      @media (min-width: 640px) {
+        .section__title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .section__desc {
+        color: var(--color-text-muted);
+        margin-top: 8px;
+        font-size: 0.95rem;
+        max-width: 600px;
+      }
+
+      /* ==========================================================================
+         SERVICES (BEM) - Exactly 4 services, no price lines, 44px buttons
+         ========================================================================== */
+      .services__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      @media (min-width: 640px) {
+        .services__grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+
+      .service-card {
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        padding: 26px 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: var(--transition);
+      }
+
+      .service-card:hover {
+        background-color: var(--color-bg-card-hover);
+        border-color: var(--color-border-focus);
+        transform: translateY(-2px);
+      }
+
+      .service-card__body {
+        margin-bottom: 22px;
+      }
+
+      .service-card__title {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 10px;
+        line-height: 1.3;
+      }
+
+      .service-card__desc {
+        font-size: 0.92rem;
+        color: var(--color-text-muted);
+        line-height: 1.55;
+      }
+
+      .service-card__action {
+        border-top: 1px solid var(--color-border);
+        padding-top: 18px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .service-card__btn {
+        width: 100%;
+        min-height: var(--min-tap);
+      }
+
+      @media (min-width: 480px) {
+        .service-card__btn {
+          width: auto;
+        }
+      }
+
+      /* ==========================================================================
+         ABOUT (BEM)
+         ========================================================================== */
+      .about__box {
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        padding: 32px 24px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .about__box {
+          padding: 44px;
+        }
+      }
+
+      .about__quote-mark {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        font-family: var(--font-heading);
+        font-size: 7rem;
+        line-height: 1;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.02);
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .about__text {
+        font-size: 1.1rem;
+        line-height: 1.75;
+        color: var(--color-text-main);
+        margin-bottom: 24px;
+        max-width: 820px;
+      }
+
+      @media (min-width: 768px) {
+        .about__text {
+          font-size: 1.22rem;
+        }
+      }
+
+      .about__features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        border-top: 1px solid var(--color-border);
+        padding-top: 24px;
+      }
+
+      @media (min-width: 640px) {
+        .about__features {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
+        }
+      }
+
+      .about__feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+      }
+
+      .about__feature-icon {
+        color: var(--color-gold);
+        flex-shrink: 0;
+        font-weight: 900;
+      }
+
+      /* ==========================================================================
+         GALLERY (BEM) - 3 Real Unsplash Images (Interior, Haircut, Beard)
+         ========================================================================== */
+      .gallery__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      @media (min-width: 640px) {
+        .gallery__grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+
+      .gallery-item {
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        aspect-ratio: 4 / 3;
+        position: relative;
+        overflow: hidden;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover {
+        border-color: var(--color-border-focus);
+        transform: translateY(-2px);
+      }
+
+      .gallery-item__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .gallery-item:hover .gallery-item__img {
+        transform: scale(1.04);
+      }
+
+      .gallery-item__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(15, 16, 18, 0) 50%, rgba(15, 16, 18, 0.88) 100%);
+        pointer-events: none;
+      }
+
+      .gallery-item__content {
+        position: absolute;
+        bottom: 12px;
+        left: 14px;
+        right: 14px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 8px;
+        z-index: 2;
+      }
+
+      .gallery-item__caption {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .gallery-item__badge {
+        background: rgba(15, 16, 18, 0.85);
+        border: 1px solid rgba(197, 155, 99, 0.35);
+        backdrop-filter: blur(8px);
+        padding: 3px 8px;
+        border-radius: var(--radius-sm);
+        font-size: 0.7rem;
+        color: var(--color-gold);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      /* ==========================================================================
+         CONTACTS & MAP (BEM)
+         ========================================================================== */
+      .contacts__layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      @media (min-width: 860px) {
+        .contacts__layout {
+          grid-template-columns: 1fr 1.25fr;
+          gap: 36px;
+          align-items: start;
+        }
+      }
+
+      .contacts__info {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .contact-card {
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        padding: 20px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .contact-card__icon {
+        color: var(--color-gold);
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      .contact-card__label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-text-dim);
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .contact-card__value {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.4;
+      }
+
+      .contact-card__sub {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        margin-top: 2px;
+      }
+
+      .contact-card__link {
+        color: #ffffff;
+      }
+
+      .contact-card__link:hover {
+        color: var(--color-gold);
+      }
+
+      .contacts__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      /* Map Container */
+      .contacts__map-wrap {
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        background-color: var(--color-bg-card);
+        min-height: 380px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contacts__map-wrap iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        border: none;
+        filter: grayscale(85%) invert(90%) contrast(90%);
+        transition: filter 0.3s ease;
+      }
+
+      .contacts__map-wrap:hover iframe {
+        filter: grayscale(20%) invert(0%) contrast(100%);
+      }
+
+      .contacts__map-footer {
+        padding: 10px 16px;
+        background-color: var(--color-bg-card);
+        border-top: 1px solid var(--color-border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.82rem;
+        color: var(--color-text-muted);
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .contacts__map-footer a {
+        color: var(--color-gold);
+        font-weight: 600;
+      }
+
+      /* ==========================================================================
+         FOOTER (BEM)
+         ========================================================================== */
+      .footer {
+        background-color: #0b0c0d;
+        border-top: 1px solid var(--color-border);
+        padding: 40px 0 32px;
+        text-align: center;
+      }
+
+      .footer__text {
+        font-size: 0.92rem;
+        color: var(--color-text-muted);
+        line-height: 1.8;
+      }
+
+      .footer__author-link {
+        color: var(--color-gold);
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .footer__author-link:hover {
+        color: var(--color-gold-hover);
+      }
+
+      .footer__disclaimer {
+        font-size: 0.82rem;
+        color: var(--color-text-dim);
+        margin-top: 12px;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.55;
+      }
+
+      /* ==========================================================================
+         MOBILE FLOATING BAR (Min-height: 44px tap targets)
+         ========================================================================== */
+      .mobile-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 95;
+        background-color: rgba(15, 16, 18, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(197, 155, 99, 0.32);
+        padding: 10px 16px;
+        display: flex;
+        gap: 10px;
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.55);
+      }
+
+      @media (min-width: 768px) {
+        .mobile-cta {
+          display: none;
+        }
+      }
+
+      .mobile-cta__btn-call {
+        min-height: var(--min-tap);
+        padding: 0 16px;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+
+      .mobile-cta__btn-book {
+        min-height: var(--min-tap);
+        flex: 1;
+        background-color: var(--color-gold);
+        color: #0f1012;
+        border-radius: var(--radius-sm);
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 14px rgba(197, 155, 99, 0.35);
+      }
+
+      /* ==========================================================================
+         SUBTLE SCROLL ANIMATIONS (FADE-IN ONLY)
+         ========================================================================== */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(14px);
+        transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .fade-in.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fade-in {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Перейти до вмісту</a>
+
+    <!-- 1. DEMO BADGE / BANNER -->
+    <aside class="demo-banner" aria-label="Попередження про демо-версію">
+      <span class="demo-banner__badge">Демо-версія</span>
+      <span>Неофіційний демонстраційний сайт для <strong data-config="name">Barbershop 369</strong>.</span>
+      <a href="#about" class="demo-banner__link">Дізнатися більше</a>
+    </aside>
+
+    <!-- 2. STICKY HEADER -->
+    <header class="header">
+      <div class="container header__inner">
+        <!-- Text logo: "369" in heading font with "BARBERSHOP" smaller beside it -->
+        <a href="#" class="header__logo" aria-label="Barbershop 369 — Головна">
+          <span class="header__logo-number" data-config="shortName">369</span>
+          <span class="header__logo-text">BARBERSHOP</span>
+        </a>
+
+        <div class="header__actions">
+          <a href="tel:0975051176" data-config-href="tel" class="header__phone-link" aria-label="Зателефонувати в барбершоп">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span data-config="phoneDisplay">097 505 1176</span>
+          </a>
+          <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm" aria-label="Записатись на стрижку онлайн">
+            Записатись
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 3. HERO SECTION -->
+      <section class="hero">
+        <div class="container hero__content fade-in">
+          <div class="hero__tag">
+            <span class="hero__tag-extra"><span data-config="city">Київ</span> · </span><span data-config="address">вул. Гарматна, 38А</span><span class="hero__tag-extra"> · <span data-config="locationDetail">ЖК «Козацький»</span></span>
+          </div>
+
+          <h1 class="hero__title">
+            Чоловічий барбершоп на Гарматній
+          </h1>
+
+          <p class="hero__subtitle">
+            Простір класичної чоловічої стрижки та догляду за бородою. Без метушні, з увагою до форми та характеру.
+          </p>
+
+          <div class="hero__actions">
+            <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--primary" aria-label="Записатись онлайн">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Записатись онлайн
+            </a>
+            <a href="tel:0975051176" data-config-href="tel" class="btn btn--outline" aria-label="Зателефонувати: 097 505 1176">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Подзвонити
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <div class="hero__meta-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="hero__meta-label">Адреса</div>
+                <div class="hero__meta-value" data-config="address">вул. Гарматна, 38А</div>
+              </div>
+            </div>
+
+            <div class="hero__meta-item">
+              <div class="hero__meta-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="hero__meta-label">Графік роботи</div>
+                <div class="hero__meta-value" data-config="hoursText">Графік уточнюйте за телефоном</div>
+              </div>
+            </div>
+
+            <div class="hero__meta-item">
+              <div class="hero__meta-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="hero__meta-label">Телефон</div>
+                <div class="hero__meta-value" data-config="phoneDisplay">097 505 1176</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SERVICES (EXACTLY 4 SERVICES, NO INVENTED DETAILS, NO PRICES) -->
+      <section id="services" class="section section--surface">
+        <div class="container">
+          <div class="section__header fade-in">
+            <span class="section__label">Послуги</span>
+            <h2 class="section__title">Основні послуги</h2>
+            <p class="section__desc">
+              Класичні техніки чоловічої стрижки та охайного моделювання бороди.
+            </p>
+          </div>
+
+          <div class="services__grid" id="services-container">
+            <!-- Service 1 -->
+            <article class="service-card fade-in">
+              <div class="service-card__body">
+                <h3 class="service-card__title">Чоловіча стрижка</h3>
+                <p class="service-card__desc">
+                  Класична або сучасна стрижка з урахуванням форми обличчя та структури волосся.
+                </p>
+              </div>
+              <div class="service-card__action">
+                <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm service-card__btn" aria-label="Записатись на чоловічу стрижку">
+                  Записатись
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 2 -->
+            <article class="service-card fade-in">
+              <div class="service-card__body">
+                <h3 class="service-card__title">Стрижка + борода</h3>
+                <p class="service-card__desc">
+                  Повний комплекс догляду: підбір стрижки та оформлення контурів бороди.
+                </p>
+              </div>
+              <div class="service-card__action">
+                <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm service-card__btn" aria-label="Записатись на стрижку та бороду">
+                  Записатись
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 3 -->
+            <article class="service-card fade-in">
+              <div class="service-card__body">
+                <h3 class="service-card__title">Моделювання бороди</h3>
+                <p class="service-card__desc">
+                  Стрижка бороди та надання акуратної форми за індивідуальними контурами.
+                </p>
+              </div>
+              <div class="service-card__action">
+                <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm service-card__btn" aria-label="Записатись на моделювання бороди">
+                  Записатись
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 4 -->
+            <article class="service-card fade-in">
+              <div class="service-card__body">
+                <h3 class="service-card__title">Дитяча стрижка</h3>
+                <p class="service-card__desc">
+                  Охайна та зручна стрижка для хлопців з уважним підходом майстра.
+                </p>
+              </div>
+              <div class="service-card__action">
+                <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm service-card__btn" aria-label="Записатись на дитячу стрижку">
+                  Записатись
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ABOUT SECTION -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section__header fade-in">
+            <span class="section__label">Про простір</span>
+            <h2 class="section__title" data-config="name">Barbershop 369</h2>
+          </div>
+
+          <div class="about__box fade-in">
+            <div class="about__quote-mark" aria-hidden="true" data-config="shortName">369</div>
+            <p class="about__text">
+              <strong data-config="name">Barbershop 369</strong> — локальний чоловічий барбершоп, розташований у житловому комплексі «Козацький» на вулиці Гарматній, 38А. Це зручне та комфортне місце для тих, хто цінує охайний вигляд, точну форму стрижки та спокійну атмосферу. Тут майстри зосереджені на деталях, а кожен візит залишає відчуття свіжості та впевненості.
+            </p>
+
+            <div class="about__features">
+              <div class="about__feature">
+                <span class="about__feature-icon" aria-hidden="true">✓</span>
+                <span>Зручне розташування у ЖК «Козацький»</span>
+              </div>
+              <div class="about__feature">
+                <span class="about__feature-icon" aria-hidden="true">✓</span>
+                <span>Зручний онлайн-запис</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. GALLERY (3 REAL UNSPLASH IMAGES: INTERIOR, HAIRCUT, BEARD) -->
+      <section id="gallery" class="section section--surface">
+        <div class="container">
+          <div class="section__header fade-in">
+            <span class="section__label">Галерея простору</span>
+            <h2 class="section__title">Атмосфера та роботи</h2>
+            <p class="section__desc">
+              Приклади інтер'єру, оформлення та стилю стрижок.
+            </p>
+          </div>
+
+          <div class="gallery__grid" id="gallery-container">
+            <!-- 1. Interior -->
+            <div class="gallery-item fade-in" id="gallery-item-interior">
+              <img
+                class="gallery-item__img"
+                src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+                alt="Інтер'єр барбершопу: ряд крісел та дзеркал"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+              <div class="gallery-item__overlay"></div>
+              <div class="gallery-item__content">
+                <div class="gallery-item__caption">Інтер'єр</div>
+                <span class="gallery-item__badge">Приклад зображення</span>
+              </div>
+            </div>
+
+            <!-- 2. Haircut -->
+            <div class="gallery-item fade-in" id="gallery-item-haircut">
+              <img
+                class="gallery-item__img"
+                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+                alt="Майстер виконує чоловічу стрижку ножицями"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+              <div class="gallery-item__overlay"></div>
+              <div class="gallery-item__content">
+                <div class="gallery-item__caption">Стрижка</div>
+                <span class="gallery-item__badge">Приклад зображення</span>
+              </div>
+            </div>
+
+            <!-- 3. Beard -->
+            <div class="gallery-item fade-in" id="gallery-item-beard">
+              <img
+                class="gallery-item__img"
+                src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+                alt="Оформлення та моделювання бороди у барбершопі"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+              <div class="gallery-item__overlay"></div>
+              <div class="gallery-item__content">
+                <div class="gallery-item__caption">Борода</div>
+                <span class="gallery-item__badge">Приклад зображення</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. CONTACTS SECTION -->
+      <section id="contacts" class="section">
+        <div class="container">
+          <div class="section__header fade-in">
+            <span class="section__label">Контакти</span>
+            <h2 class="section__title">Як нас знайти</h2>
+            <p class="section__desc">
+              <span data-config="city">Київ</span>, <span data-config="address">вул. Гарматна, 38А</span> (<span data-config="locationDetail">ЖК «Козацький»</span>).
+            </p>
+          </div>
+
+          <div class="contacts__layout">
+            <div class="contacts__info fade-in">
+              <div class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-card__label">Адреса</div>
+                  <div class="contact-card__value"><span data-config="address">вул. Гарматна, 38А</span>, <span data-config="city">Київ</span></div>
+                  <div class="contact-card__sub" data-config="locationDetail">ЖК «Козацький»</div>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-card__label">Телефон для зв'язку</div>
+                  <div class="contact-card__value">
+                    <a href="tel:0975051176" data-config-href="tel" class="contact-card__link" data-config="phoneDisplay">097 505 1176</a>
+                  </div>
+                  <div class="contact-card__sub">Для запису та консультацій</div>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-card__label">Графік роботи</div>
+                  <div class="contact-card__value" data-config="hoursText">Графік уточнюйте за телефоном</div>
+                  <div class="contact-card__sub">За попереднім записом</div>
+                </div>
+              </div>
+
+              <div class="contacts__actions">
+                <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="flex: 1;" aria-label="Записатись онлайн">
+                  Записатись онлайн
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__map-wrap fade-in">
+              <iframe
+                title="Мапа розташування Barbershop 369 на вулиці Гарматна, 38А, Київ"
+                src="https://maps.google.com/maps?q=%D0%B2%D1%83%D0%BB.+%D0%93%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D0%BD%D0%B0%2C+38%D0%90%2C+%D0%9A%D0%B8%D1%97%D0%B2&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+              <div class="contacts__map-footer">
+                <span><span data-config="city">Київ</span>, <span data-config="address">вул. Гарматна, 38А</span> (<span data-config="locationDetail">ЖК «Козацький»</span>)</span>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB.+%D0%93%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D0%BD%D0%B0%2C+38%D0%90%2C+%D0%9A%D0%B8%D1%97%D0%B2" data-config-href="map" target="_blank" rel="noopener noreferrer">
+                  Прокласти маршрут →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">
+          Демо-версія сайту · створено 
+          <a href="https://t.me/ruslan_num0" data-config-href="telegram" target="_blank" rel="noopener noreferrer" class="footer__author-link">
+            <span data-config="authorName">Русланом Крижанським</span> (@ruslan_num0)
+          </a>
+        </p>
+        <p class="footer__disclaimer">
+          Ця сторінка є демонстраційним концептуальним макетом для локального бізнесу. Всі торгові знаки та публічні дані належать їх законним власникам.
+        </p>
+      </div>
+    </footer>
+
+    <!-- 9. FLOATING MOBILE ACTION BAR (Min-height: 44px) -->
+    <nav class="mobile-cta" aria-label="Швидкі дії для мобільних пристроїв">
+      <a href="tel:0975051176" data-config-href="tel" class="mobile-cta__btn-call" aria-label="Подзвонити">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </a>
+      <a href="https://n1340326.alteg.io" data-config-href="booking" target="_blank" rel="noopener noreferrer" class="mobile-cta__btn-book" aria-label="Записатись онлайн">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Записатись онлайн</span>
+      </a>
+    </nav>
+
+    <!-- INLINE JAVASCRIPT: Config Hydration & Scroll Animations -->
+    <script>
+      (function () {
+        var cfg = window.BARBER_CONFIG || {};
+
+        // 1. Text content hydration via [data-config]
+        document.querySelectorAll('[data-config]').forEach(function (el) {
+          var key = el.getAttribute('data-config');
+          if (cfg[key] !== undefined && cfg[key] !== '') {
+            el.textContent = cfg[key];
+          }
+        });
+
+        // 2. Link attributes hydration via [data-config-href]
+        document.querySelectorAll('[data-config-href]').forEach(function (el) {
+          var type = el.getAttribute('data-config-href');
+          if (type === 'booking' && cfg.bookingUrl) {
+            el.setAttribute('href', cfg.bookingUrl);
+          } else if (type === 'tel' && cfg.phoneRaw) {
+            el.setAttribute('href', 'tel:' + cfg.phoneRaw);
+          } else if (type === 'telegram' && cfg.authorTelegram) {
+            el.setAttribute('href', cfg.authorTelegram);
+          } else if (type === 'map' && (cfg.address || cfg.city)) {
+            var q = encodeURIComponent((cfg.address || '') + ', ' + (cfg.city || ''));
+            el.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + q);
+          }
+        });
+
+        // 3. Gallery Hydration: sync images with config if updated dynamically
+        if (Array.isArray(cfg.gallery)) {
+          cfg.gallery.forEach(function (item) {
+            if (!item || !item.id) return;
+            var tile = document.getElementById('gallery-item-' + item.id);
+            if (tile && item.imageUrl && item.imageUrl.trim().length > 0) {
+              var img = tile.querySelector('.gallery-item__img');
+              if (img) {
+                img.src = item.imageUrl.trim();
+                img.alt = item.alt || item.caption || 'Фото барбершопу';
+              }
+            }
+          });
+        }
+
+        // 4. IntersectionObserver for subtle fade-in animations
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+          );
+
+          document.querySelectorAll('.fade-in').forEach(function (el) {
+            observer.observe(el);
+          });
+        } else {
+          document.querySelectorAll('.fade-in').forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
